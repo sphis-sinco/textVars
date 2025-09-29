@@ -5,6 +5,7 @@ import lime.utils.Assets;
 class Textvar
 {
 	public static var states:Map<String, Map<String, Dynamic>> = [];
+
 	public static function setStateVariable(state:String, variable:String, value:Dynamic)
 	{
 		if (!states.exists(state))
@@ -41,12 +42,13 @@ class Textvar
 			var variable = lineSplit[1];
 			var newValue = lineSplit[2];
 
-			if (file.length > 3)
+			if (lineSplit.length > 3)
 			{
-				for (i in 0...file.length)
+				for (i in 0...lineSplit.length)
 				{
+					// Should I add a space?
 					if (i > 2)
-						newValue += file[i];
+						newValue += lineSplit[i];
 				}
 			}
 
@@ -60,15 +62,14 @@ class Textvar
 				{
 					var letter = type_string.charAt(i);
 
-					if (StringTools.contains(newValue, letter))
-					{
+					if (StringTools.contains(newValue.toLowerCase(), letter) && !is_string)
 						is_string = true;
-						return;
-					}
 				}
 
 				if (is_string)
+				{
 					stateMap.set(variable, Std.string(newValue));
+				}
 				else
 				{
 					stateMap.set(variable, Std.parseFloat(newValue));
