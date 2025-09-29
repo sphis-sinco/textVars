@@ -9,6 +9,9 @@ class Textvar
 	{
 		var file = Assets.getText('assets/data/$fileName.txt').split('\n');
 
-		for (line in file) {}
+		for (line in file)
+		{
+			var lineSplit = line.split('__');
+		}
 	}
 }
