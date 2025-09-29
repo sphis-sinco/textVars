@@ -5,7 +5,7 @@ import lime.utils.Assets;
 class Textvar
 {
 	public static var states:Map<String, Map<String, Dynamic>> = [];
-	public static function parseStateOverwrites(state:String, fileName:String)
+	public static function parseStateOverwrites(targetState:String, fileName:String)
 	{
 		var file = Assets.getText('assets/data/$fileName.txt').split('\n');
 
@@ -16,8 +16,11 @@ class Textvar
 			var variable = lineSplit[1];
 			var newValue = lineSplit[2];
 
-			var stateMap = states.get(state);
-			stateMap.set(variable, newValue);
+			if (targetState == state)
+			{
+				var stateMap = states.get(state);
+				stateMap.set(variable, newValue);
+			}
 		}
 	}
 }
