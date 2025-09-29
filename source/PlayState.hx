@@ -13,6 +13,8 @@ class PlayState extends FlxState
 
 		trace(Textvar.states.get('state').get('value'));
 
+		Textvar.parseStateOverwrites('state', 'test01');
+
 	}
 
 	override public function update(elapsed:Float)
