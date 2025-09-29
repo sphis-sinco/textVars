@@ -5,6 +5,12 @@ import lime.utils.Assets;
 class Textvar
 {
 	public static var states:Map<String, Map<String, Dynamic>> = [];
+	public static function parseAllStateOverwrites(fileName:String)
+	{
+		for (state => value in states)
+			parseStateOverwrites(state, fileName);
+	}
+
 	public static function parseStateOverwrites(targetState:String, fileName:String)
 	{
 		var file = Assets.getText('assets/data/$fileName.txt').split('\n');
