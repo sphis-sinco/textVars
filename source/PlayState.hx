@@ -11,6 +11,8 @@ class PlayState extends FlxState
 		Parser.states.set('state', []);
 		Parser.states.get('state').set('value', -10);
 
+		trace(Parser.states.get('state').get('value'));
+
 	}
 
 	override public function update(elapsed:Float)
