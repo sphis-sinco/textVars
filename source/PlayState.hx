@@ -1,9 +1,12 @@
 package;
 
 import flixel.FlxState;
+import sphis.textvar.Parser;
 
 class PlayState extends FlxState
 {
+	public var textvar:Parser;
+
 	override public function create()
 	{
 		super.create();
