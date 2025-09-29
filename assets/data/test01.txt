@@ -1,1 +1,1 @@
-state.value = 0
+state.value.0
