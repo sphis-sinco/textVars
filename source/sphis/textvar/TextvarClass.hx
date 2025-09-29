@@ -1,8 +1,5 @@
 package sphis.textvar;
 
-import js.html.Text;
-import lime.utils.Assets;
-
 class TextvarClass
 {
 	public var states(get, set):Map<String, Map<String, Dynamic>>;
