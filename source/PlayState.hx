@@ -12,8 +12,10 @@ class PlayState extends FlxState
 		Textvar.states.get('state').set('value', -10);
 
 		trace(Textvar.states.get('state').get('value'));
+		trace(Type.typeof(Textvar.states.get('state').get('value')));
 		Textvar.parseAllStateOverwrites('test01');
 		trace(Textvar.states.get('state').get('value'));
+		trace(Type.typeof(Textvar.states.get('state').get('value')));
 
 	}
 
