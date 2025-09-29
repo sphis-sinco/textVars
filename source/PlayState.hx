@@ -14,6 +14,7 @@ class PlayState extends FlxState
 
 		Textvar.setStateVariable('state', 'value', -10);
 		tvClass.setStateVariable('classState', 'value', -10);
+		tvClass.setStateVariable('classState', 'stringTest', "mmmm");
 
 		trace('state:value');
 		trace(Textvar.getStateVariable('state', 'value'));
@@ -21,6 +22,9 @@ class PlayState extends FlxState
 		trace('classState:value');
 		trace(tvClass.getStateVariable('classState', 'value'));
 		trace(Type.typeof(tvClass.getStateVariable('classState', 'value')));
+		trace('classState:stringTest');
+		trace(tvClass.getStateVariable('classState', 'stringTest'));
+		trace(Type.typeof(tvClass.getStateVariable('classState', 'stringTest')));
 
 		Textvar.parseAllStateOverwrites('test01');
 		trace('state:value');
@@ -29,6 +33,9 @@ class PlayState extends FlxState
 		trace('classState:value');
 		trace(tvClass.getStateVariable('classState', 'value'));
 		trace(Type.typeof(tvClass.getStateVariable('classState', 'value')));
+		trace('classState:stringTest');
+		trace(tvClass.getStateVariable('classState', 'stringTest'));
+		trace(Type.typeof(tvClass.getStateVariable('classState', 'stringTest')));
 	}
 
 	override public function update(elapsed:Float)

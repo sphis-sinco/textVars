@@ -1,2 +1,3 @@
 state__value__0.15
 classState__value__0.15
+classState__stringTest__I am a string. Do you believe me?__I hope you do
