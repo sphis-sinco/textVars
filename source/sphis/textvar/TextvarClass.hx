@@ -19,32 +19,20 @@ class TextvarClass
 	}
 
 	function get_states():Map<String, Map<String, Dynamic>>
-	{
 		return Textvar.states;
-	}
 
 	public function setStateVariable(state:String, variable:String, value:Dynamic)
-	{
 		Textvar.setStateVariable(state, variable, value);
-	}
 
 	public function getState(state:String):Map<String, Dynamic>
-	{
 		return Textvar.getState(state);
-	}
 
 	public function getStateVariable(state:String, variable:String):Dynamic
-	{
 		return Textvar.getStateVariable(state, variable);
-	}
 
 	public function parseAllStateOverwrites(fileName:String)
-	{
 		Textvar.parseAllStateOverwrites(fileName);
-	}
 
 	public function parseStateOverwrites(targetState:String, fileName:String)
-	{
 		Textvar.parseStateOverwrites(targetState, fileName);
-	}
 }
