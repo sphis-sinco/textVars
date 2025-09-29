@@ -12,6 +12,12 @@ class Textvar
 		for (line in file)
 		{
 			var lineSplit = line.split('__');
+			var state = lineSplit[0];
+			var variable = lineSplit[1];
+			var newValue = lineSplit[2];
+
+			var stateMap = states.get(state);
+			stateMap.set(variable, newValue);
 		}
 	}
 }
