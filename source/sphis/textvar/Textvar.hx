@@ -5,6 +5,15 @@ import lime.utils.Assets;
 class Textvar
 {
 	public static var states:Map<String, Map<String, Dynamic>> = [];
+	public static function setStateVariable(state:String, variable:String, value:Dynamic)
+	{
+		if (!states.exists(state))
+			states.set(state, []);
+
+		var state = getState(state);
+		state.set(variable, value);
+	}
+
 	public static function getState(state:String):Map<String, Dynamic>
 	{
 		return states.get(state);

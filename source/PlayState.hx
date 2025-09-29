@@ -9,8 +9,7 @@ class PlayState extends FlxState
 	{
 		super.create();
 
-		Textvar.states.set('state', []);
-		Textvar.states.get('state').set('value', -10);
+		Textvar.setStateVariable('state', 'value', -10);
 
 		trace(Textvar.getStateVariable('state', 'value'));
 		trace(Type.typeof(Textvar.getStateVariable('state', 'value')));
