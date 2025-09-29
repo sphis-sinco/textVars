@@ -6,7 +6,7 @@ import sphis.textvar.TextvarClass;
 
 class PlayState extends FlxState
 {
-	public var tvClass:TextvarClass;
+	public var tvClass:TextvarClass = new TextvarClass();
 
 	override public function create()
 	{
