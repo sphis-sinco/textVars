@@ -5,6 +5,16 @@ import lime.utils.Assets;
 class Textvar
 {
 	public static var states:Map<String, Map<String, Dynamic>> = [];
+	public static function getState(state:String):Map<String, Dynamic>
+	{
+		return states.get(state);
+	}
+
+	public static function getStateVariable(state:String, variable:String):Dynamic
+	{
+		return getState(state).get(variable);
+	}
+
 	public static function parseAllStateOverwrites(fileName:String)
 	{
 		for (state => value in states)
